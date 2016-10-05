@@ -1,6 +1,10 @@
 ﻿function min(array){
+	if (Boolean(array)===false){
+		return undefined;
+	}
 	var array=array.filter(
-	function(value){
+	
+	function (value){
 		return(typeof value==="number");
 	}
 );
@@ -15,6 +19,9 @@
 }
 
 function max(array){
+	if (Boolean(array)===false){
+		return undefined;
+	}
 	var array=array.filter(
 	function(value){
 		return(typeof value==="number");
