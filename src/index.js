@@ -6,9 +6,9 @@
 );
 	var min_num=array[0];
 	array.forEach(
-		function(minValue){
-			if(min_num>minValue)
-			min_num=minValue;
+		function minValue(value){
+			if(min_num>value)
+			min_num=value;
 		}
 	);
 	return min_num;
@@ -22,9 +22,9 @@ function max(array){
 );
 	var max_num=array[0];
 	array.forEach(
-		function(maxValue){
-			if(max_num<maxValue)
-			max_num=maxValue;
+		function maxValue(value){
+			if(max_num<value)
+			max_num=value;
 		}
 	);
 	return max_num;
