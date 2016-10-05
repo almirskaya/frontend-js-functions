@@ -1,41 +1,31 @@
-﻿function min(array){
-	if (Boolean(array)===false){
-		return undefined;
+﻿function getNumericValues(array) {
+	return array.filter(
+		function(value){
+			return (typeof value==='number');
+		})
+};
+
+function min(array){
+	if (!array){
+		return;
 	}
-	 array=array.filter(
-	
-	function (value){
-		return(typeof value==="number");
-	}
-);
+	array = getNumericValues(array)
 	var min_num=array[0];
-	array.forEach(
-		function minValue(value){
-			if (min_num>value){
-			min_num=value;
-		}}
-	);
-	return min_num;
-}
+	return array.sort(function(a,b){
+		return a-b;
+	})[0]
+};
 
 function max(array){
-	if (Boolean(array)===false){
-		return undefined;
+	if (!array){
+		return;
 	}
-	 array=array.filter(
-	function(value){
-		return(typeof value==="number");
-	}
-);
+	array = getNumericValues(array)
 	var max_num=array[0];
-	array.forEach(
-		function maxValue(value){
-			if (max_num<value){
-			max_num=value;
-		}}
-	);
-	return max_num;
-}
+	return array.sort(function(a,b){
+		return a-b;
+	})[array.length-1]
+};
 
 function sum() {		
 	var getSum=0;
