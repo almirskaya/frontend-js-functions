@@ -1,8 +1,13 @@
-﻿function getNumericValues(array) {
-	return array.filter(
-		function(value){
-			return (typeof value==='number');
-		})
+﻿function isNumber(value){
+	return (typeof value==='number');
+};
+
+function getNumericValues(array) {
+	return array.filter(isNumber)
+};
+
+function sortByAscending(a,b){
+	return a-b;
 };
 
 function min(array){
@@ -10,10 +15,7 @@ function min(array){
 		return;
 	}
 	array = getNumericValues(array)
-	var min_num=array[0];
-	return array.sort(function(a,b){
-		return a-b;
-	})[0]
+	return array.sort(sortByAscending)[0]
 };
 
 function max(array){
@@ -21,10 +23,7 @@ function max(array){
 		return;
 	}
 	array = getNumericValues(array)
-	var max_num=array[0];
-	return array.sort(function(a,b){
-		return a-b;
-	})[array.length-1]
+	return array.sort(sortByAscending)[array.length-1]
 };
 
 function sum() {		
