@@ -1,5 +1,5 @@
 ﻿function isNumber(value){
-	return (typeof value==='number');
+	return (typeof value === 'number');
 };
 
 function getNumericValues(array) {
@@ -7,7 +7,7 @@ function getNumericValues(array) {
 };
 
 function sortByAscending(a,b){
-	return a-b;
+	return a - b;
 };
 
 function min(array){
@@ -27,10 +27,11 @@ function max(array){
 };
 
 function sum() {		
-	var getSum=0;
-	for(var i=0;i<arguments.length;i++){
-		if (typeof (arguments[i])!=="number"){
-		continue}
+	var getSum = 0;
+	for(var i = 0;i < arguments.length;i++){
+		if (typeof (arguments[i]) !== "number"){
+		continue 
+	}
 		getSum += arguments[i];
 	}
 	return getSum;
